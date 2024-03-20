@@ -1,4 +1,4 @@
-import { CartItem } from './entities/interfaces/cart-items';
+import { CartItem } from '../entities/interfaces/cart-items';
 
 export class ShoppingCard {
   private readonly _items: CartItem[] = [];
