@@ -1,5 +1,4 @@
 import './style.css';
-import './normalCode';
 import { Messaging } from './solid/ocp/services/messaging';
 import { Persistency } from './solid/ocp/services/persistency';
 import { Order } from './solid/ocp/entities/order';
