@@ -1,10 +1,11 @@
+import { IndividualCustomer } from './solid/isp/entities/customer';
+import { FiftyPercentDiscount, TenPercentDiscount } from './solid/isp/entities/discount';
+import { Order } from './solid/isp/entities/order';
+import { Product } from './solid/isp/entities/product';
+import { Messaging } from './solid/isp/services/messaging';
+import { Persistency } from './solid/isp/services/persistency';
+import { ShoppingCard } from './solid/isp/solid';
 import './style.css';
-import { Messaging } from './solid/ocp/services/messaging';
-import { Persistency } from './solid/ocp/services/persistency';
-import { Order } from './solid/ocp/entities/order';
-import { Product } from './solid/ocp/entities/product';
-import { ShoppingCard } from './solid/ocp/solid';
-import { FiftyPercentDiscount, TenPercentDiscount } from './solid/ocp/entities/discount';
 
 /* import { ShoppingCard } from './normalCode'; */ //without patterns
 
@@ -14,7 +15,9 @@ const fiftyPercentDiscount = new FiftyPercentDiscount();
 const shoppingCard = new ShoppingCard(tenPercentDiscount);
 const messaging = new Messaging();
 const persistency = new Persistency();
-const order = new Order(shoppingCard, messaging, persistency);
+const customer = new IndividualCustomer('luiz', 'henrique', '000.000.000/01');
+
+const order = new Order(shoppingCard, messaging, persistency, customer);
 
 shoppingCard.addItem({ name: 'shirt', price: 10 });
 shoppingCard.addItem(new Product('cap', 80).getProduct());

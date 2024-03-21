@@ -12,7 +12,7 @@ export class IndividualCustomer implements IndividualCustomerProtocol {
   }
 
   getName(): string {
-    return this.firstName;
+    return this.firstName + ' ' + this.lastName;
   }
 
   getIDN(): string {
