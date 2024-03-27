@@ -1,10 +1,10 @@
-import { IndividualCustomer } from './solid/isp/entities/customer';
-import { FiftyPercentDiscount, TenPercentDiscount } from './solid/isp/entities/discount';
-import { Order } from './solid/isp/entities/order';
-import { Product } from './solid/isp/entities/product';
-import { Messaging } from './solid/isp/services/messaging';
-import { Persistency } from './solid/isp/services/persistency';
-import { ShoppingCard } from './solid/isp/solid';
+import { IndividualCustomer } from './solid/dip/entities/customer';
+import { FiftyPercentDiscount, TenPercentDiscount } from './solid/dip/entities/discount';
+import { Order } from './solid/dip/entities/order';
+import { Product } from './solid/dip/entities/product';
+import { Messaging } from './solid/dip/services/messaging';
+import { Persistency } from './solid/dip/services/persistency';
+import { ShoppingCard } from './solid/dip/solid';
 import './style.css';
 
 /* import { ShoppingCard } from './normalCode'; */ //without patterns
