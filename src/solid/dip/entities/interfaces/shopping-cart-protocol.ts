@@ -5,8 +5,6 @@ export interface ShoppingCardProtocol {
 
   removeItem(index: number): void;
 
-  get items(): Readonly<CartItem[]>;
-
   total(): number;
 
   totalWithDiscount(): number;
